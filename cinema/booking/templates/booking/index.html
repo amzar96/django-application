@@ -1,0 +1,16 @@
+<html>
+<h1>Movie</h1>
+{% if latest_movie_list %}
+<ul>
+    <small>View customer</small>
+    {% for movie in latest_movie_list %}
+    <li><a href="{% url 'booking:details' movie.id %}">{{ movie.title }} @ {{ movie.show_date }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No movie are available.</p>
+{% endif %}
+<p><small>Craving watch cinema?</small>
+    <a href="{% url 'booking:new_booking' %}">Booking a Movie</a></p>
+
+</html>

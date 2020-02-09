@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ movie.title }} Customer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>{{ movie.title }}</h2>
+        {% if customer %}
+        <p>Show all customer for {{ movie.title }}</p>
+        <p><small>Craving watch cinema?</small>
+            <a href="{% url 'booking:new_booking' %}">Booking a Movie</a></p>
+
+        <table class="table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Pax</th>
+                </tr>
+            </thead>
+            {% for item in customer %}
+
+            <tbody>
+
+                <tr>
+
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>{{ item.pax }}</td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+
+        {% else %}
+        <p>No customer for this movie</p>
+        {% endif %}
+        <p><a href="{% url 'booking:index' %}">Back to home</a></p>
+    </div>
+
+</body>
+
+</html>

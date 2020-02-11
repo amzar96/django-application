@@ -2,7 +2,7 @@
 
 Actually, this is my personal project repo. I started to learn the flow of Django.
 
-100% Python & Docker
+100% Python 
 
 ## List of Telegram Bot
 

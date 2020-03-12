@@ -4,7 +4,7 @@ Actually, this is my personal project repo. I started to learn the flow of Djang
 
 100% Python 
 
-## List of Telegram Bot
+## List of Application
 
 * [:raised_hands: Cinema](https://github.com/amzar96/django-application/tree/master/cinema "Cinema") (Booking Application)
 * Stay tuned ...

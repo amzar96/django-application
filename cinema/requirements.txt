@@ -4,7 +4,7 @@ attrs==19.3.0
 black==19.10b0
 Click==7.0
 Django==3.0.3
-numpy==1.18.1
+numpy==1.22.0
 pathspec==0.7.0
 Pillow==7.0.0
 pytz==2019.3
